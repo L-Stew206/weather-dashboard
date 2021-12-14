@@ -3,3 +3,23 @@
      font-family: 'Corinthia', cursive;
     font-family: 'Roboto Condensed', sans-serif; ;
 }
+
+header {
+    text-align: center;
+    padding-bottom: 100px;
+}
+
+/* .btn { */
+    margin: 50px;
+    : left;
+}
+
+#search-input {
+    width: 20%;
+}
+   
+.btn-primary {
+    width: 25%;
+   line-height: 20px;
+    
+}

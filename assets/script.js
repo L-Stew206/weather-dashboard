@@ -1,6 +1,7 @@
-console.log("welcome")
+console.log("w")
 
 var apiKey = "bf4513b1f75b7c630d99fbb51bffb8d2"
+var citySearch = JSON.parse(localStorage.getItem('citySearch')) || []
 
 //Print/Render the weather data to the page
 
@@ -37,7 +38,9 @@ function geoData(cityName) {
     })
     .then(function(data) {
         console.log ( data );
-        
+        $("#temp").text("Temp: "+data.current.temp+"*F")
+        $("#wind_speed").text ("Wind: "+data.current.wind+"mph")
+        $("#humidity").text ("humidity: "+data.current.humidity+"%")
     });
 }
 
@@ -59,6 +62,7 @@ function geoData(cityName) {
 
 $("#searchBtn").on ("click", function() {
     var city = $("#search-input").val()
+    console.log(city);
     geoData(city);
 
 })
