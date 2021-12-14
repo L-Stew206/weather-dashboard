@@ -37,10 +37,14 @@ function geoData(cityName) {
         return response.json();
     })
     .then(function(data) {
+        var weatherIcon = "o4n"
         console.log ( data );
-        $("#temp").text("Temp: "+data.current.temp+"*F")
-        $("#wind_speed").text ("Wind: "+data.current.wind+"mph")
-        $("#humidity").text ("humidity: "+data.current.humidity+"%")
+        // $("#weatherIcon").attr(`src`, `http://openweathermap.org/img/wn/${weatherIcon}.png`+data.weather[0].icon)
+        $("#temp").text("Temp: "+data.current.temp+"°F")
+        $("#wind_speed").text ("Wind: "+data.current.wind_speed+"mph")
+        $("#humidity").text ("Humidity: "+data.current.humidity+"%")
+        $("#uv-index").text ("UV-Index: "+data.current.uvi)
+        
     });
 }
 
